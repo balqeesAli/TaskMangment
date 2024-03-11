@@ -1,0 +1,15 @@
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\bin\Debug\net6.0\TaskMangmentModel.exe
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\bin\Debug\net6.0\TaskMangmentModel.deps.json
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\bin\Debug\net6.0\TaskMangmentModel.runtimeconfig.json
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\bin\Debug\net6.0\TaskMangmentModel.dll
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\bin\Debug\net6.0\TaskMangmentModel.pdb
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.csproj.AssemblyReference.cache
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.AssemblyInfoInputs.cache
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.AssemblyInfo.cs
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.csproj.CoreCompileInputs.cache
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.dll
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\refint\TaskMangmentModel.dll
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.pdb
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\TaskMangmentModel.genruntimeconfig.cache
+C:\Users\balqq\OneDrive\Desktop\CourseRegistration\TaskMangment\TaskMangmentModel\obj\Debug\net6.0\ref\TaskMangmentModel.dll
