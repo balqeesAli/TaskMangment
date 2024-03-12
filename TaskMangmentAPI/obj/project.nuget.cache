@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TNnReyjgqYlMkLap+c05TgqkuDgODYwLNT0Da9LnsM6BxI3GQsMdqAQSXONDSMvSXfKC25Hm6STknp5fWkRsog==",
+  "dgSpecHash": "PQWLk+zh9OJCW5QuLgFr7b3Kfuvp91VUiv5tfoIO4LTEnTzocHP1RtejaUq437qJaPvJJhGHhzm4+Zy4ce9vNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\balqq\\OneDrive\\Desktop\\CourseRegistration\\TaskMangment\\TaskMangmentAPI\\TaskMangmentAPI.csproj",
+  "projectFilePath": "C:\\Users\\balqq\\OneDrive\\Desktop\\TaskMangmentSystem\\TaskMangment\\TaskMangmentAPI\\TaskMangmentAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\balqq\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\balqq\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.6\\microsoft.aspnetcore.jsonpatch.6.0.6.nupkg.sha512",

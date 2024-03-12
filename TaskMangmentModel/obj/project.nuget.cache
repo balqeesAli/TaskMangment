@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j48dwsP8cSS3My6CfPCBK9gJM2H9UQ+UiHC9F9eFbFTKKfLn58NkgXwbHN/U+SWbS1mIWKbJfmTrzo06+3MwWA==",
+  "dgSpecHash": "fEuBqXgXSRuV9ZKFSaiB2/8F+xH/MrJZhVydm7xLamqUM33pe1D49WLHah+cRliM0qd2VeqJQC46dYngO0EcgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\balqq\\OneDrive\\Desktop\\CourseRegistration\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj",
+  "projectFilePath": "C:\\Users\\balqq\\OneDrive\\Desktop\\TaskMangmentSystem\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

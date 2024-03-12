@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\balqq\\OneDrive\\Desktop\\CourseRegistration\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj": {}
+    "C:\\Users\\balqq\\OneDrive\\Desktop\\TaskMangmentSystem\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\balqq\\OneDrive\\Desktop\\CourseRegistration\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj": {
+    "C:\\Users\\balqq\\OneDrive\\Desktop\\TaskMangmentSystem\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balqq\\OneDrive\\Desktop\\CourseRegistration\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj",
+        "projectUniqueName": "C:\\Users\\balqq\\OneDrive\\Desktop\\TaskMangmentSystem\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj",
         "projectName": "TaskMangmentModel",
-        "projectPath": "C:\\Users\\balqq\\OneDrive\\Desktop\\CourseRegistration\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj",
+        "projectPath": "C:\\Users\\balqq\\OneDrive\\Desktop\\TaskMangmentSystem\\TaskMangment\\TaskMangmentModel\\TaskMangmentModel.csproj",
         "packagesPath": "C:\\Users\\balqq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balqq\\OneDrive\\Desktop\\CourseRegistration\\TaskMangment\\TaskMangmentModel\\obj\\",
+        "outputPath": "C:\\Users\\balqq\\OneDrive\\Desktop\\TaskMangmentSystem\\TaskMangment\\TaskMangmentModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balqq\\AppData\\Roaming\\NuGet\\NuGet.Config",

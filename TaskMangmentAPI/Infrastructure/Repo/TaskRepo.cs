@@ -1,4 +1,6 @@
-﻿using TaskMangmentAPI.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using TaskMangmentAPI.Context;
+using TaskMangmentAPI.Infrastructure.DTOs;
 using TaskMangmentAPI.Repo.IRepo;
 using TaskMangmentModel.Models;
 
@@ -13,9 +15,20 @@ namespace TaskMangmentAPI.Repo
             _db = db;
         }
          
-        public List<UsersTask> GetOrgnaizationAccountListByAccountId(string id)
+        public async Task<IList<TaskDto>> GetTaskListByAccountId(string id)
         {
-            return _db.UsersTasks.Where(x => x.AccountId.ToString() == id).ToList();
+            return await _db.UsersTasks
+                .Where(x => x.AccountId.ToString() == id)
+                .Select(x => new TaskDto { 
+                Id = x.Id,
+                title = x.title,
+                Summary = x.Summary,
+                status = x.status
+                }).ToListAsync();
+        }
+        public async Task<UsersTask> GetTaskByTaskId(string id)
+        {
+            return await _db.UsersTasks.Where(x => x.Id.ToString() == id.ToLower()).FirstOrDefaultAsync();
         }
 
         public bool Put(UsersTask usersTask)

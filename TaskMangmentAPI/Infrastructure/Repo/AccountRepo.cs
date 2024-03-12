@@ -16,7 +16,11 @@ namespace TaskMangmentAPI.Repo
 
         public async Task<Account?> GetAccountByIdAsync(string id)
         {
-            return await _db.Accounts.FirstOrDefaultAsync(bus => bus.Id.ToString() == id);
+            return await _db.Accounts.FirstOrDefaultAsync(acc => acc.Id.ToString() == id.ToLower());
+        }
+        public async Task<Account?> GetAccountByEmailAsync(string email)
+        {
+            return await _db.Accounts.FirstOrDefaultAsync(acc => acc.Email == email);
         }
 
         public async Task<bool> Post(Account account)

@@ -8,12 +8,16 @@ namespace TaskMangmentModel.Models
         public Guid Id { get; set; }
 
         [Required]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [Required]
         public string Email { get; set; }
 
         [Required]
         public string HashPassword { get; set; }
+        public Account()
+        {
+
+        }
     }
 }
