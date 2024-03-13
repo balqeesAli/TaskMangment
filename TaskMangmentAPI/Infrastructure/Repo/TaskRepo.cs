@@ -18,12 +18,12 @@ namespace TaskMangmentAPI.Repo
         public async Task<IList<TaskDto>> GetTaskListByAccountId(string id)
         {
             return await _db.UsersTasks
-                .Where(x => x.AccountId.ToString() == id)
+                .Where(x => x.AccountId == id.ToLower())
                 .Select(x => new TaskDto { 
-                Id = x.Id,
-                title = x.title,
+                TaskId = x.Id,
+                Title = x.title,
                 Summary = x.Summary,
-                status = x.status
+                Status = x.status
                 }).ToListAsync();
         }
         public async Task<UsersTask> GetTaskByTaskId(string id)

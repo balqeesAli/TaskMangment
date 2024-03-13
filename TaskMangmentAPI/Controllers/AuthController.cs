@@ -42,8 +42,6 @@ namespace TaskMangmentAPI.Controllers
                 return BadRequest(ex.Message);
             }
             
-        }
-
-
+        } 
     }
 }

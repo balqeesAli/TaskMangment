@@ -3,17 +3,26 @@
 namespace TaskMangmentAPI.Infrastructure.DTOs
 {
     public class TaskDto
-    { 
-        public Guid Id { get; set; }
+    {
+        public Guid TaskId { get; set; }
+        public int? TaskNo { get; set; }
 
         [Required]
-        public string title { get; set; }
+        public string Title { get; set; }
 
         [Required]
         public string Summary { get; set; }
 
         [Required]
-        public string status { get; set; }
-         
+        public string Status { get; set; }
+        public TaskDto(){}
+        public TaskDto(int taskNo, TaskDto taskDto)
+        {
+            this.TaskId = taskDto.TaskId;
+            this.TaskNo = taskNo;
+            this.Title = taskDto.Title;
+            this.Summary = taskDto.Summary;
+            this.Status = taskDto.Status;  
+        }
     }
 }

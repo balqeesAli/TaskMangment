@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using System.Security.Principal;
 using System.Text;
 using TaskMangmentAPI.Infrastructure.DTOs;
 using TaskMangmentAPI.Infrastructure.Repo.IRepo;
@@ -53,25 +54,25 @@ namespace TaskMangmentAPI.Services
             }
         }
 
-        public async Task<ResponseModel<object>> Login(loginDto model)
+        public async Task<ResponseModel<Account>> Login(loginDto model)
         {
             if (string.IsNullOrEmpty(model.Email))
             {
-                return ResponseModel<object>.Fail(400, "The Request body is not defined");
+                return ResponseModel<Account>.Fail(400, "The Request body is not defined");
             }
 
             var account = await _dbRepo.AccountRepo.GetAccountByEmailAsync(model.Email);
 
             if (account == null)
             {
-                return ResponseModel<object>.Fail(404, "Invalid username or password");
+                return ResponseModel<Account>.Fail(404, "Invalid username or password");
             } 
              
             if (Hash(model.HashPassword) != account.HashPassword)
             {
-                return ResponseModel<object>.Fail(403, "Invalid username or password");
+                return ResponseModel<Account>.Fail(403, "Invalid username or password");
             } 
-            return ResponseModel<object>.Success(default);
+            return ResponseModel<Account>.Success(account);
         }
 
 

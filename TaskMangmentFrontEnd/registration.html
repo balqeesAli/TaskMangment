@@ -42,6 +42,9 @@
               id="name"
               name="name"
               placeholder="Your name .."
+              required
+              pattern="[a-zA-Z ]{3,}"
+              title="Name must be alphabetic and at least 3 characters long"
             />
           </div>
         </div>
@@ -55,6 +58,9 @@
               id="email"
               name="email"
               placeholder="Your email .."
+              required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Please match email format email@example.com"
             />
           </div>
         </div>
@@ -69,6 +75,9 @@
               name="password"
               placeholder="Your password .."
               onkeyup="checkPasswordStrength()"
+              required
+              pattern=".{6,}"
+              title="Password must be at least 6 characters long"
             />
             <div id="password-strength-status"></div>
           </div>
@@ -90,7 +99,6 @@
         </div>
       </div>
     </footer>
-
     <script
       src="https://code.jquery.com/jquery-2.1.1.min.js"
       type="text/javascript"

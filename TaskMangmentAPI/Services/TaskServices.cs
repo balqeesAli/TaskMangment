@@ -115,7 +115,16 @@ namespace TaskMangmentAPI.Services
         }
         public async Task<ResponseModel<IList<TaskDto>>> GetTaskListByAccountId(string accountId)
         { 
-            return ResponseModel<IList<TaskDto>>.Success(await _dbRepo.TaskRepo.GetTaskListByAccountId(accountId)); 
+            IList<TaskDto> taskList = await _dbRepo.TaskRepo.GetTaskListByAccountId(accountId);
+            List<TaskDto> orderedTaskList = new List<TaskDto>();
+            var taskNo = 1;
+            foreach (TaskDto task in taskList)
+            {
+                orderedTaskList.Add(new TaskDto(taskNo, task));
+                taskNo++;
+            }
+
+            return ResponseModel<IList<TaskDto>>.Success(orderedTaskList); 
         }
     }
 }

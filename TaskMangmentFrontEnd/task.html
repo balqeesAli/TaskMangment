@@ -7,7 +7,6 @@
       <link rel="stylesheet" href="css/stylesheet.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
-       
       </style>
    </head>
    <body>
@@ -40,53 +39,37 @@
          <div id="myTasks" class="tabcontent">
             <div style="overflow-x: auto;">
                <table>
-                  <tr>
-                     <th>No#</th>
-                     <th>Title</th>
-                     <th>Description</th>
-                     <th>Status</th>
-                     <th>Action</th>
-                  </tr>
-                  <tr>
-                     <td>Jill</td>
-                     <td>Smith</td>
-                     <td>50</td>
-                     <td>50</td>
-                     <th><input type="button" value="Edit"><input type="button" value="Delete" id="primary"></th>
-                  </tr>
-                  <tr>
-                     <td>Eve</td>
-                     <td>Jackson</td>
-                     <td>94</td>
-                     <td>94</td>
-                     <th><input type="button" value="Edit"><input type="button" value="Delete" id="primary"></th>
-                  </tr>
-                  <tr>
-                     <td>Adam</td>
-                     <td>Johnson</td>
-                     <td>67</td>
-                     <td>67</td>
-                     <th><input type="button" value="Edit"><input type="button" value="Delete" id="primary"></th>
-                  </tr>
+                  <thead>
+                     <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
                </table>
             </div>
          </div>
          <div id="newTask" class="tabcontent">
-            <form action="/action_page.php">
+            <form id="add-task-form">
                <div class="row">
                   <div class="col-25">
                      <label for="title">Title</label>
                   </div>
                   <div class="col-75">
-                     <input type="text"  name="titlt" placeholder="Task Title">
+                     <input type="text" id="title" name="title" placeholder="Task Title" 
+                        required>
                   </div>
                </div>
                <div class="row">
                   <div class="col-25">
-                     <label for="description">Description</label>
+                     <label for="description">Summary</label>
                   </div>
                   <div class="col-75">
-                     <textarea id="description" name="description" placeholder="Task description .." style="height:200px"></textarea>
+                     <textarea id="description" name="description" placeholder="Task Summary.." style="height:200px" required></textarea>
                   </div>
                </div>
                <div class="row">
@@ -95,9 +78,10 @@
                   </div>
                   <div class="col-75">
                      <select id="status" name="status">
-                        <option value="todo">ToDO</option>
-                        <option value="progress">Progress</option>
-                        <option value="done">Done</option>
+                        <option value="ToDo">To Do</option>
+                        <option value="Progress">Progress</option>
+                        <option value="QA">QA</option>
+                        <option value="Done">Done</option>
                      </select>
                   </div>
                </div>
@@ -121,6 +105,8 @@
 </html>
 <body></body>
 </html>
+<script src="populateTasks.js"></script> 
+<script src="deleteTask.js"></script> 
 <script>
    function openCity(evt, cityName) {
      var i, tabcontent, tablinks;
@@ -135,4 +121,42 @@
      document.getElementById(cityName).style.display = "block";
      evt.currentTarget.className += " active";
    }
+   document.getElementById("add-task-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+   
+    const title = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
+    const status = document.getElementById("status").value;
+   
+    const accountId = JSON.parse(localStorage.getItem("userData")).id;
+    
+    const taskData = {
+        title: title,
+        summary: description,
+        status: status,
+        accountId: accountId
+    };
+   
+    fetch("https://localhost:7226/api/Task/Add", {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json-patch+json"
+        },
+        body: JSON.stringify(taskData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to add task");
+        }
+     
+        alert("Task added successfully.");
+         document.getElementById("add-task-form").reset();
+        populateTasks();
+    })
+    .catch(error => {
+        console.error("Error adding task:", error);
+    });
+   });
+   
 </script>

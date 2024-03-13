@@ -7,7 +7,6 @@
       <link rel="stylesheet" href="css/stylesheet.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
-         
       </style>
    </head>
    <body>
@@ -40,7 +39,7 @@
                   <label for="email">Email</label>
                </div>
                <div class="col-75">
-                  <input type="email" id="email" name="email" placeholder="Your email ..">
+                  <input type="email" id="email" name="email" placeholder="Your email .." required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please match email format email@example.com">
                </div>
             </div>
             <div class="row">
@@ -48,7 +47,7 @@
                   <label for="password">Password</label>
                </div>
                <div class="col-75">
-                  <input type="password" id="password" name="password" placeholder="Your password ..">
+                  <input type="password" id="password" name="password" placeholder="Your password .." required pattern=".{6,}" title="Password must be at least 6 characters long">
                </div>
             </div>
             <div class="row">
@@ -67,10 +66,10 @@
          </div>
       </footer>
    </body>
-</html> 
+</html>
 <body></body>
 </html>
-<script> 
+<script>
    document
      .getElementById("login-form")
      .addEventListener("submit", function (event) {
@@ -78,12 +77,12 @@
        
        const email = document.getElementById("email").value;
        const password = document.getElementById("password").value;
- 
+   
        const loginData = {
          email: email,
          hashPassword: password,
        };
- 
+   
        fetch("https://localhost:7226/api/Auth/login", {
          method: "POST",
          headers: {
@@ -95,11 +94,15 @@
            if (!response.ok) {
              throw new Error("Login failed");
            } 
-           window.location.href = "task.html";
+           return response.json(); 
+         })
+         .then((data) => {
+           localStorage.setItem("userData", JSON.stringify(data.body));
+         window.location.href = "task.html";
          })
          .catch((error) => {
            console.error("Login error:", error); 
            alert("Login failed. Please try again.");
          });
      });
- </script>
+</script>
